@@ -1,0 +1,902 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    /* font-family: "Sen", sans-serif; */
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --line-clamp: 1;
+}
+
+/* ===================common===================*/
+a {
+    text-decoration: none;
+}
+
+.layout {
+    width: 117rem;
+    /* thu nhỏ màn hình lại thì luôn cách lề trái phải 1.2rem */
+    max-width: calc(100% - 2.4rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading-lv2 {
+    color: #171100;
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26;
+    /* 126.316% */
+    letter-spacing: -0.76px;
+}
+
+/* giới hạn số dòng bằng dấu ... */
+.line-clamp {
+    display: -webkit-box;
+    overflow: hidden;
+    /* nếu không chỉ định biến line-clamp thì lấy 1 */
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+}
+
+/* chỉ định giá trị line-clamp */
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+/* xử lý trường hợp link dài không có space làm vỡ tỉ lệ */
+.break-all {
+    word-break: break-all;
+}
+
+/* =================== header ===================*/
+.header-content {
+    background: #FFFCF4;
+    position: sticky;
+    top: 0rem;
+    z-index: 1;
+}
+
+.body-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.4rem 0 2.4rem;
+}
+
+.nav-header ul {
+    display: flex;
+}
+
+.nav-header {
+    margin-left: auto;
+}
+
+.nav-header a {
+    color: #171100;
+    text-align: center;
+    line-height: 2.8rem;
+    padding: 0.9rem 2.1rem 0.8rem;
+    position: relative;
+}
+
+.nav-header a:hover {
+    color: #c99813;
+}
+
+.nav-header .rectangle a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 2.1rem;
+    bottom: 0.8rem;
+    width: 1.2rem;
+    height: 0.2rem;
+    border-radius: 0.1rem;
+    background: #171100;
+}
+
+.btn {
+    min-width: 11.8rem;
+    display: inline-block;
+}
+
+.btn-sign-up {
+    width: 14.4rem;
+    height: 5rem;
+    border-radius: 2.45rem;
+    background: #171100;
+    color: #FFF;
+    text-align: center;
+    font-weight: 600;
+    line-height: 2.8rem;
+    padding: 1.1rem 4.1rem;
+    margin-left: 4.9rem;
+}
+
+.btn-sign-up:hover {
+    color: #c79714;
+}
+
+/* =================== main-hero ===================*/
+
+.hero {
+    padding: 4rem 0 6.5rem;
+    background: #FFFCF4;
+}
+
+.body-hero {
+    display: flex;
+}
+
+.hero-left {
+    margin-right: 13rem;
+    width: 48.7%;
+    /* 570/1170 */
+    position: relative;
+}
+
+.hero-right {
+    width: 40.17%;
+    /* 470/1170 */
+}
+
+.guy-lesson {
+    width: 470px;
+    height: 685px;
+    /* tranh vo anh */
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card {
+    position: absolute;
+    right: 0;
+    bottom: 4.8rem;
+    width: 270px;
+    /* height: 244px; */
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+    padding: 2.4rem;
+}
+
+.item {
+    display: flex;
+}
+
+.card .icon {
+    margin-right: 1.6rem;
+    width: 48px;
+    height: 48px;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon1 {
+    background-color: #FFF9E8;
+}
+
+.icon2 {
+    background-color: #FCEFFF;
+}
+
+.icon3 {
+    background-color: #EBEAFF;
+}
+
+.card .text {
+    margin-bottom: 1.4rem;
+}
+
+.text .num-course {
+    color: #5F5B53;
+    font-size: 1.4rem;
+    line-height: 26px;
+    /* 185.714% */
+}
+
+.text .design,
+.text .dev,
+.text .marketing {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 30px;
+    /* 166.667% */
+}
+
+.hero-right .heading {
+    color: #171100;
+    font-family: Sen;
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 68px;
+    /* 117.241% */
+    letter-spacing: -1.16px;
+    margin-bottom: 2.2rem;
+}
+
+.hero-right .descript {
+    color: #5F5B53;
+    font-size: 1.8rem;
+    line-height: 30px;
+    /* 166.667% */
+    margin-bottom: 3.8rem;
+}
+
+.btn-see-course {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 30px;
+    /* 166.667% */
+    width: 180px;
+    height: 64px;
+    border-radius: 32px;
+    background: #FFB900;
+    padding: 1.7rem 3.3rem 1.7rem 3.4rem;
+    margin-right: 2.8rem;
+}
+
+.hero-right .group {
+    display: flex;
+}
+
+.watch-video {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.watch-video .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch-video .icon a img {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.watch-video a span {
+    width: 148px;
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 30px;
+    margin-left: 1.4rem;
+    /* 166.667% */
+}
+
+.hero-right .descript2 {
+    color: #5F5B53;
+    font-size: 1.8rem;
+    margin-top: 4.8rem;
+    line-height: 1.67;
+    /* 166.667% */
+}
+
+.hero-right .num-student {
+    margin-top: 0.8rem;
+    margin-right: 2.8rem;
+    color: #5F5B53;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    line-height: 30px;
+}
+
+.hero-right .num-student strong {
+    color: #171100;
+    font-family: Sen;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 54px;
+    /* 122.727% */
+}
+
+.hero-right .num-course {
+    margin-top: 0.8rem;
+    color: #5F5B53;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    line-height: 30px;
+}
+
+.hero-right .num-course strong {
+    color: #171100;
+    font-family: Sen;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 54px;
+    /* 122.727% */
+}
+
+/* =================== main-popular ===================*/
+.popular {
+    margin-top: 20rem;
+}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-top .text p {
+    width: 458px;
+    color: #5F5B53;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    /* 166.667% */
+    margin-top: 1.6rem;
+}
+
+.popular-top .icon {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.popular-top .icon button {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid #FFB900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFB900;
+}
+
+.popular-top .icon button:hover {
+    background-color: #FFB900;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popular-bot {
+    margin-top: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.popular-bot .course {
+    /* đặt trọng số các cột bằng nhau để giới hạn độ dài văn bản nhập, tránh quá dài dẫn đến vỡ tỉ lệ */
+    flex: 1;
+    width: 100%;
+    height: 466px;
+    border-radius: 12px;
+    border: 1.5px solid #E2DFDA;
+    background: #FFF;
+}
+
+.popular-bot .course:hover {
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: #e6e4e4;
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular-bot .design {
+    width: 100%;
+    height: 278px;
+    border-radius: 12px 12px 0px 0px;
+    cursor: pointer;
+    /* margin-right: 3rem; */
+}
+
+.popular-bot .text-layout {
+    width: 326px;
+    height: 150px;
+    margin: 1.6rem 2.2rem 2.2rem;
+}
+
+.popular-bot .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-bot .top p a {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+    /* 166.667% */
+}
+
+/* .popular-bot .top p a:visited {
+    color: #171100;
+} */
+
+.popular-bot .top p a:hover {
+    color: #c79714;
+}
+
+.popular-bot .top p a:active {
+    color: #ee0712;
+}
+
+.popular-bot .top span {
+    color: #FEA31B;
+    line-height: 1.75;
+    /* 175% */
+}
+
+.popular-bot .top .star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.popular-bot .desc {
+    margin-top: 0.6rem;
+    color: #5F5B53;
+    line-height: 1.86;
+    /* 185.714% */
+}
+
+.popular-bot .bot {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-bot .bot p {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+    /* 166.667% */
+}
+
+.popular-bot .bot a {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.86;
+    /* 185.714% */
+    width: 118px;
+    height: 50px;
+    border-radius: 25px;
+    background: #171100;
+    padding: 1.2rem 2.4rem;
+}
+
+.popular-bot .bot a:hover {
+    width: 118px;
+    height: 50px;
+    border-radius: 25px;
+    background: #FFB900;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.86;
+    /* 185.714% */
+}
+
+/* =================== feedback ===================*/
+.feedback {
+    /* width: 100%; */
+    /* height: 380px; */
+    padding: 9.6rem 0;
+    background: #2E2100;
+    margin-top: 20rem;
+}
+
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    transform: translateX(-100%);
+    transition: all ease 0.5s;
+}
+
+.feedback .person {
+    width: 13.6%;
+}
+
+.feedback .comment {
+    width: 65.8%;
+}
+
+.feedback .person .name {
+    color: #F7F7F7;
+    font-family: Sen;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.42;
+    /* 141.667% */
+    margin-top: 1.8rem;
+}
+
+.feedback .person .job {
+    color: #BFBCB2;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    /* 185.714% */
+    margin-top: 0.4rem;
+}
+
+.feedback .person .icon {
+    margin-top: 2.8rem;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.feedback .person .icon .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    cursor: pointer;
+}
+
+.feedback .person .icon .dot.active {
+    background-color: #FFB900;
+    cursor: default;
+}
+
+.feedback .comment p {
+    margin-left: 3rem;
+    color: #FFF;
+    font-size: 2.6rem;
+    font-style: italic;
+    line-height: 1.54;
+    /* 153.846% */
+}
+
+/* =================== features ===================*/
+.features .body {
+    margin-top: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.features .body .pic1 {
+    width: 27rem;
+    height: 40.4rem;
+    border-radius: 1.6rem;
+    margin-top: 3.4rem;
+}
+
+.features .body .pic2 {
+    width: 27rem;
+    height: 40.5rem;
+    border-radius: 1.6rem;
+    margin-left: 3rem;
+    margin-bottom: 3.3rem;
+}
+
+.features .body .text {
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features .body .text .desc1,
+.features .body .text .desc2 {
+    color: #5F5B53;
+    line-height: 1.75;
+    margin-top: 1.6rem;
+}
+
+.features .link {
+    margin-top: 3.2rem;
+}
+
+.features .link .btn-sign-up2 {
+    width: 137px;
+    height: 50px;
+    border-radius: 26px;
+    background: #171100;
+    color: #FFF;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.75;
+    padding: 1.1rem 3.7rem;
+    border: transparent;
+}
+
+.features .link .btn-sign-up2:hover {
+    background-color: #FFB900;
+    cursor: pointer;
+}
+
+.feature2 .body {
+    display: flex;
+    align-items: center;
+    margin-top: 20rem;
+    justify-content: space-between;
+}
+
+.feature2 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 48.7%;
+}
+
+.feature2 .text .desc1 {
+    color: #171100;
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.27;
+    letter-spacing: -0.76px;
+}
+
+.feature2 .text .desc2 {
+    margin-top: 1.6rem;
+    color: #5F5B53;
+    line-height: 1.75;
+}
+
+.feature2 .text .btn-join-now a {
+    display: inline-block;
+    margin-top: 3.2rem;
+    padding: 1.2rem 3.2rem 1rem 3.1rem;
+    width: 137px;
+    height: 50px;
+    border-radius: 26px;
+    background: #171100;
+    color: #FFF;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.feature2 .text .btn-join-now a:hover {
+    background-color: #FFB900;
+}
+
+.feature2 .image img {
+    width: 470px;
+    height: 440px;
+    border-radius: 20px;
+}
+
+/* =================== blogs ===================*/
+.blog {
+    margin-top: 20rem;
+    padding: 9.6rem 0;
+    background: #FFFCF4;
+    /* background-color: red; */
+}
+
+.blog .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title .desc1 {
+    color: #130606;
+    text-align: center;
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26;
+    letter-spacing: -0.76px;
+}
+
+.title .desc2 {
+    margin-top: 1.6rem;
+    width: 448px;
+    color: #696262;
+    text-align: center;
+    line-height: 1.75;
+}
+
+.blogs {
+    overflow: hidden;
+    margin-top: 5.5rem;
+    display: flex;
+    gap: 3rem;
+    border-radius: 16px;
+    background: #FFF;
+}
+
+.blogs .itemm {
+    flex-shrink: 0;
+    flex: 1;
+    /* transform: translateX(-500%); */
+    transition: all ease 0.5s;
+}
+
+.blogs .itemm:hover {
+    background-color: rgb(243, 239, 239);
+    border-radius: 16px;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blogs .blog-img {
+    width: 370px;
+    height: 250px;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.blogs .blog-img:hover {
+    cursor: pointer;
+}
+
+.blogs .text {
+    margin: 2rem 2rem 2.8rem;
+}
+
+.blogs .date {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.blogs .date .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #FFB900;
+}
+
+.blogs .date .day {
+    color: #5F5B53;
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+.blogs .rectangle {
+    width: 160px;
+    height: 1px;
+    border-radius: 0.5px;
+    background: #E2DFDA;
+    margin-top: 1.2rem;
+}
+
+.blogs .desc {
+    color: #171100;
+    font-weight: 600;
+    line-height: 1.75;
+    margin-top: 1.2rem;
+}
+
+.blogs .btn-read-more {
+    display: inline-block;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.86;
+    width: 118px;
+    height: 50px;
+    border-radius: 25px;
+    background: #171100;
+    padding: 1.2rem 2.1rem;
+    margin-top: 1.2rem;
+}
+
+.blogs .btn-read-more:hover {
+    background-color: #FFB900;
+}
+
+.blog .dots {
+    margin-top: 3.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.blog .dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background: #5F5B53;
+}
+
+.blog .dots .dot.active {
+    background-color: #FFB900;
+}
+
+/* =================== footer ===================*/
+.footer {
+    padding: 9.6rem 0 2.8rem 0;
+    background: #2E2100;
+}
+
+.footer .top {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.footer .logo {
+    width: 22.82%;
+    margin-right: 14.5rem;
+}
+
+.footer .logo p {
+    color: #BFBCB2;
+    font-size: 14px;
+    line-height: 1.86;
+    margin-top: 1.8rem;
+}
+
+.footer .icon {
+    margin-top: 1.8rem;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.footer .col {
+    width: 21.6%;
+}
+
+.footer .col p {
+    display: inline-block;
+    padding-bottom: 1.4rem;
+    padding-right: 4.8rem;
+    margin-bottom: 2.8rem;
+    border-bottom: 1px solid #59554B;
+    color: #FFF;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.footer .col a {
+    display: inline-block;
+    color: #BFBCB2;
+    font-size: 14px;
+    line-height: 1.86;
+    margin-bottom: 1.2rem;
+}
+
+.footer .col li:last-child a {
+    margin-bottom: 3.8rem;
+}
+
+.footer .top {
+    border-bottom: 1px solid #59554B;
+}
+
+.footer .copyright {
+    color: #807D74;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.86;
+    margin-top: 2.8rem;
+}
